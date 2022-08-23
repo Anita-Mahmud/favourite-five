@@ -1,8 +1,8 @@
 // per player
 document.getElementById('btn-calculate').addEventListener('click', function() {
     const perPlayerExpense = getExpenseValueByInput('per-player');
-    const l = document.getElementById('name-list').childElementCount;
-    const totalPlayerExpense = perPlayerExpense * l;
+    const listNumber = document.getElementById('name-list').childElementCount;
+    const totalPlayerExpense = perPlayerExpense * listNumber;
     setValue('player-expenses', totalPlayerExpense)
 })
 document.getElementById('btn-calculate-total').addEventListener('click', function() {

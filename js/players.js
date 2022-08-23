@@ -16,7 +16,7 @@ function selectPlayers(element) {
 
 function displayPlayers() {
     const nameContainer = document.getElementById('name-list');
-    const btn = document.getElementsByClassName('btn');
+
     nameContainer.textContent = "";
     for (let i = 0; i < nameList.length; i++) {
 
