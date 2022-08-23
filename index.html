@@ -19,7 +19,8 @@
     <!-- header end -->
     <main class="pt-24 px-28 pb-40">
         <div class="grid grid-cols-3 gap-4">
-            <div class="grid grid-cols-3 gap-4 col-span-2">
+            <!-- player list start -->
+            <div class="grid grid-cols-3 gap-4 col-span-2" id="player-list">
 
                 <div class="card  bg-black shadow-xl">
 
@@ -118,9 +119,63 @@
                     </div>
                 </div>
             </div>
-            <div class="...">01</div>
+            <!-- player list end -->
+            <div class="">
+                <!-- selected five start -->
+                <div class="bg-black text-white rounded-xl" id="selected">
+                    <h3 class="text-center text-3xl py-6">
+                        Selected - V
+                    </h3>
+                    <ol id="name-list">
+
+                    </ol>
+
+                </div>
+                <!-- selected five end -->
+                <!-- budget start -->
+                <div class="mt-10 bg-black text-white rounded-xl py-6">
+                    <h3 class="text-center text-3xl">
+                        Budget
+                    </h3>
+                    <!-- per player start -->
+                    <div class="text-xl pl-8 py-8">
+                        <label for="per-player" class="pr-4 text-slate-200">Per Player</label>
+                        <input type="text" name="" id="per-player" class="text-black px-4 py-1">
+                    </div>
+
+
+                    <button class="btn btn-primary text-xl px-36 ml-3" id="btn-calculate">Calculate</button>
+                    <!-- per player end -->
+                    <!-- total expenses start -->
+                    <div class="text-xl pl-8 py-8 pr-4 text-slate-200 ">
+                        <h3 class="inline">Player Expenses</h3>
+                        <h3 class="inline ml-20">$<span id="player-expenses">0</span></h3>
+
+                    </div>
+                    <div class="text-xl pl-8 pb-8">
+                        <label for="per-player" class="pr-4 text-slate-200">Manager</label>
+                        <input type="text" name="" id="manager" class="text-black px-4 py-1">
+                    </div>
+                    <div class="text-xl pl-8 py-8">
+                        <label for="per-player" class="pr-4 text-slate-200">Coach</label>
+                        <input type="text" name="" id="coach" class="text-black px-4 py-1">
+                    </div>
+                    <button class="btn btn-primary text-xl px-28 ml-3" id="btn-calculate-total">Calculate Total</button>
+                    <div class="text-xl pl-8 py-8 pr-4 text-slate-200 ">
+                        <h3 class="inline">Total</h3>
+                        <h3 class="inline ml-20">$<span id="total-expense">0</span></h3>
+
+                    </div>
+                    <!-- total expenses end -->
+
+                </div>
+                <!-- budget end -->
+            </div>
         </div>
     </main>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/players.js"></script>
+    <script src="./js/calculate.js"></script>
 </body>
 
 </html>
