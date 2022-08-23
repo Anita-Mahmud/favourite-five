@@ -7,13 +7,16 @@ function selectPlayers(element) {
         playerName: playerName
     };
     nameList.push(selected);
-
+    if (nameList.length <= 5) {
+        element.disabled = true;
+    }
     displayPlayers();
 
 }
 
 function displayPlayers() {
     const nameContainer = document.getElementById('name-list');
+    const btn = document.getElementsByClassName('btn');
     nameContainer.textContent = "";
     for (let i = 0; i < nameList.length; i++) {
 
