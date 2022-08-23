@@ -1,26 +1,31 @@
-document.getElementById('player-list').addEventListener('click', function(event) {
-    const playerName = event.target.parentNode.parentNode.children[0].innerText;
-    // const selectedPlayers = document.querySelectorAll('selected');
-    // const nameList = document.querySelectorAll('name-list');
-    // console.log(event.target.innerText)
-    const players = [];
-    // products-cart
+const nameList = [];
 
-    const cartContainer = document.getElementById("name-list");
+function selectPlayers(element) {
+    const playerName = element.parentNode.parentNode.children[0].innerText;
 
+    const selected = {
+        playerName: playerName
+    };
+    nameList.push(selected);
 
-    for (let i = 0; i < players.length; i++) {
+    displayPlayers();
 
+}
 
-        const li = document.createElement("li");
+function displayPlayers() {
+    const nameContainer = document.getElementById('name-list');
+    nameContainer.textContent = "";
+    for (let i = 0; i < nameList.length; i++) {
 
-        li.innerText = players[i].playerName;
-        cartContainer.appendChild(li);
+        if (i != 5) {
+            const li = document.createElement('li');
+            li.innerText = nameList[i].playerName;
+            nameContainer.appendChild(li);
+
+        } else {
+            alert('You Have already selected 5 Players')
+        }
+
     }
 
-
-
-
-
-
-})
+}
