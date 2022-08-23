@@ -22,7 +22,7 @@ function displayPlayers() {
 
         if (i != 5) {
             const li = document.createElement('li');
-            li.innerText = nameList[i].playerName;
+            li.innerText = (i + 1) + " . " + " " + nameList[i].playerName;
             nameContainer.appendChild(li);
 
         } else {
